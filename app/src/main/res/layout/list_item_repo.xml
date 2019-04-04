@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/selectableItemBackground">
+
+    <TextView
+        android:id="@+id/repoName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin"
+        android:layout_marginTop="@dimen/margin_x2"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/medium_text"
+        app:layout_constraintEnd_toStartOf="@+id/tipsOptionsGuideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="My repository name" />
+
+    <TextView
+        android:id="@+id/stars"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_x2"
+        android:layout_marginEnd="8dp"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/medium_text"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/repoName"
+        app:layout_constraintStart_toStartOf="@+id/repoName"
+        app:layout_constraintTop_toBottomOf="@+id/repoName"
+        tools:text="@string/number_of_stars" />
+
+    <TextView
+        android:id="@+id/repoId"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin"
+        android:layout_marginStart="@dimen/margin"
+        android:textAlignment="viewEnd"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/medium_text"
+        app:layout_constraintBottom_toBottomOf="@+id/stars"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tipsOptionsGuideline"
+        app:layout_constraintTop_toTopOf="@+id/repoName"
+        tools:text="@string/repo_id" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/tipsOptionsGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
